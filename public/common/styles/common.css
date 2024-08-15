@@ -104,6 +104,35 @@ footer{margin-top:auto;position:relative;}
 .footer-logo img{width:125px;}
 .footer-sub{flex:1;padding-left:20px;font-size:12px;}
 
+/* modal */
+.bi{margin-right:5px;}
+.modal-open #appPage{z-index:9;position:relative;}
+.modal-header{padding:10px 20px;}
+.modal-header::after{display:none;}
+.layerfit{font-size:24px;color:#222;font-weight:700;}
+.loginform label{display:block;margin:20px 0 10px 0;font-size:16px;font-weight:700;color:#676767;}
+/* b-form-input */
+.form-control{height:40px;color:#676767;font-size:14px;}
+.form-control::placeholder{color:#ddd;}
+/* b-button */
+.btnwrap{margin-top:30px;}
+.btnwrap.half{display:flex;justify-content:space-between;margin-top:30px;}
+.btnwrap.half .btn{flex-basis:49%;}
+.btn{display:block;width:100%;height:40px;line-height:38px;border-radius:5px;font-size:18px;text-align:center;}
+.btn-login{background:#17a2b8;color:#fff;}
+.btn-cancel{background:#d5d5d5;}
+.form-group .d-block{margin-bottom:10px;font-size:16px;}
+.form-group .d-block::before{content:'\F676';display:inline-block;margin:-5px 3px 0 0;vertical-align:middle;font-family:bootstrap-icons !important;}
+.form-group:nth-of-type(1) .d-block::before{content:'\F676';}
+.form-group:nth-of-type(2) .d-block::before{content:'\F47A';}
+.form-group:nth-of-type(3) .d-block::before{content:'\F68B';}
+.form-group:nth-of-type(4) .d-block::before{content:'\F890';}
+.form-group .d-block:nth-of-type(1){padding-right:80px;position:relative;}
+.form-group .d-block:nth-of-type(1) input + button{width:75px;height:40px;border:1px solid #ddd;border-radius:0;background:#eee;font-size:14px;position:absolute;right:0;bottom:28px;}
+.form-group .form-text{display:block;padding:0 20px;margin:10px 0 0 10px;font-size:12px;color:#17a2b8 !important;opacity:0.6;position:relative;}
+.form-group .form-text::after{content:'';display:block;width:20px;height:20px;background:url("/images/pencil.svg") no-repeat left center;opacity:0.4;position:absolute;left:0;top:0;}
+.form-gorup .custom-control{display:inline-block;margin:0 15px 0 20px;}
+
 /* 태블릿 */
 @media screen and (max-width: 1024px) {
   .system > button {width:25px;height:25px;font-size:0;}
