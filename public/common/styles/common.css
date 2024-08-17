@@ -76,6 +76,8 @@ button:focus{outline: none;}
 .flexbox{display: flex; }
 
 .contentbox{width:100%;max-width:1200px;margin:0 auto;padding:0 20px;}
+
+/* 헤더 영역 */
 .topmenu{padding:5px 0;}
 .topmenu .contentbox{display:flex;justify-content:space-between;align-items:center;}
 .logo img{width:65px;}
@@ -90,6 +92,7 @@ header::after{content:'';display:block;width:100%;height:20px;background-color:#
 
 #wrap{display:flex;flex-direction:column;height:100%;}
 
+/* 푸터 영역 */
 footer{margin-top:auto;position:relative;}
 .botinfo{width:100%;height:50px;padding:10px 0;background:#ebebeb;border-top:solid 1px #ddd;border-bottom:solid 1px #ddd;}
 .botbtngroup{max-width:1200px;width:100%;margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center;}
@@ -104,7 +107,7 @@ footer{margin-top:auto;position:relative;}
 .footer-logo img{width:125px;}
 .footer-sub{flex:1;padding-left:20px;font-size:12px;}
 
-/* modal */
+/* 헤더 유틸 - 모달 팝업 */
 .bi{margin-right:5px;}
 .modal-open #appPage{z-index:9;position:relative;}
 .modal-header{padding:10px 20px;}
@@ -133,6 +136,41 @@ footer{margin-top:auto;position:relative;}
 .form-group .form-text::after{content:'';display:block;width:20px;height:20px;background:url("/images/pencil.svg") no-repeat left center;opacity:0.4;position:absolute;left:0;top:0;}
 .form-gorup .custom-control{display:inline-block;margin:0 15px 0 20px;}
 
+/* 메인 영역 */
+.mainbanner{height:350px;overflow:hidden;text-align:center;}
+.mainbanner > img{height:350px;}
+.newbook{background:url("/images/content_bg.png") repeat-x;padding:40px 0;}
+.maintit{margin-bottom:20px;font-size:38px;color:#222;font-weight:900;text-align:center;}
+.main-tit > span{display:block;margin-top:10px;font-size:18pc;color:#ababab;}
+.tabcontent{max-width:1200px;margin:0 auto;}
+.tap{margin:40px 100px;display:flex;text-align:center;justify-content:space-evenly;}
+.btn-tap{display:inline-block;height:40px;line-height:40px;font-size:18px;color:#888;font-weight:700;position:relative;}
+.btn-tap::after{content:"";display:block;/*width:100%;*/width:0;height:2px;background:#222;position:absolute;bottom:0;left:0;}
+.btn-tap.active{color:#222;}
+.btn-tap.active::after{width:100%;}
+/* main slider */
+.mainslider{margin:0 100px;position:relative;}
+.slick-arrow{width:42px;height:42px;background:url("/images/arrow-icon.png") no-repeat 0 0/100%;font-size:0;position:absolute;top:50%;margin-top:-55px;z-index:9;}
+.slick-arrow.slick-prev{left:10px;}
+.slick-arrow.slick-next{right:10px;transform:rotate(180deg);}
+.rollimg{padding: 0 10px;}
+.imgbox > img{max-width:100%;}
+.rollimg > strong{display:block;font-size:15px;color:#666;}
+.textbox{font-size:13px;color:#ababab;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* 태블릿 */
 @media screen and (max-width: 1024px) {
   .system > button {width:25px;height:25px;font-size:0;}
@@ -141,11 +179,16 @@ footer{margin-top:auto;position:relative;}
   .system > button:nth-of-type(2) {background:url("/images/icon-member.svg") no-repeat 0 0/100%;}
 }
 
+
+
+
 /* 모바일 */
 @media screen and (max-width: 767px) {
+  /* 헤더 영역 */
   nav ul > li {flex:auto;padding-right:10px;}
   nav ul > li:nth-last-of-type(1) {padding-left:0;}
   nav ul > li > button{font-size:15px;}
+  /* 푸터 영역 */
   .botinfo{height:auto;padding:0 30px;}
   .botbtngroup{flex-wrap:wrap;justify-content:center;padding:10px 0;}
   .footerinfo{position:relative;}
@@ -156,4 +199,12 @@ footer{margin-top:auto;position:relative;}
   .footer-logo img{width:85px;}
   .footer-logo{align-self:flex-start;padding-top:4px;}
   .footer-info address span{display:block;}
+
+  /* 메인 영역 */
+  .tapcontent:{padding:0 10px;}
+  .maintit{font-size:26px;}
+  .maintit > span{font-size:14px;margin-top:0;}
+  .tap{margin:20px 0;}
+  .btn-tap{height:20px;line-height:20px;font-size:14px;}
+  .mainslider{margin:0;}
 }
