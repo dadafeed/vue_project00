@@ -3,14 +3,27 @@
     <Subpage :pagetit="'도서 소개'">
       <div class="bookpage"> <!-- <slot>으로 대체될 영역 -->
         <!-- Vue slick carousel -->
-        <VueSlickCarousel class="subpageslider" v-bind="settings">
-          <div class="rollimg" v-for="(item, index) in Newbooks" :key="index">
+        <VueSlickCarousel
+          class="subpageslider"
+          v-bind="settings"
+          @init="handleInit"
+          ref="carousel"
+        >
+          <div
+            class="rollimg"
+            :class="{ active: index === tabIndex }"
+            v-for="(item, index) in Newbooks"
+            :key="index"
+            @click="Clicklink(index)"
+          >
             <span class="imgbox"><img :src="item.imgurl" /></span>
             <strong v-html="item.name"></strong>
           </div>
         </VueSlickCarousel>
         <!-- // Vue slick carousel -->
-        <section class="bookdetail">
+
+        <!-- 컴포넌트 영역 -->
+        <!-- <section class="bookdetail">
           <h1 class="booktitle">
             Do it! 웹 사이트 따라 만들기
             <span>HTML, CSS, 자바스크립트, JQuery, Ajax로 웹 퍼블리싱</span>
@@ -38,9 +51,7 @@
               </ul>
             </div>
           </div>
-          <!-- 탭메뉴 -->
           <div class="book-detailinfo">
-            <!-- 탭 제목 -->
             <div class="detailTap">
               <b-form-radio
                 name="detail-tap"
@@ -97,7 +108,6 @@
                 <i class="bi bi-inboxes" />자료실
               </b-form-radio>
             </div>
-            <!-- 탭 콘텐츠 -->
             <template v-if="tapselect === 'introduce'">
               <div class="detailTapCon">
                 <h1 class="tapcontit">
@@ -180,8 +190,16 @@
               </div>
             </template>
           </div>
-          <!-- // 탭메뉴 -->
-        </section>
+        </section> -->
+        <component 
+          :is="componentslist[tabIndex]"
+          :bookUrl="Newbooks[tabIndex].imgurl"
+          :bookName="Newbooks[tabIndex].name"
+          :bookDec="Newbooks[tabIndex].dec"
+        > <!-- 처음에는 0이었다가 사용자가 도서를 선택하면 해당 순번으로 바뀜-->
+        </component>
+        <!-- // 컴포넌트 영역 -->
+
       </div>
     </Subpage>
   </div>
@@ -189,9 +207,30 @@
 
 <script>
   import Subpage from "@/layout/components/Subpage.vue";
+  import BookDetail1 from "./BookDetail1.vue";
+  import BookDetail2 from "./BookDetail2.vue";
+  import BookDetail3 from "./BookDetail3.vue";
+  import BookDetail4 from "./BookDetail4.vue";
+  import BookDetail5 from "./BookDetail5.vue";
+  import BookDetail6 from "./BookDetail6.vue";
+  import BookDetail7 from "./BookDetail7.vue";
+  import BookDetail8 from "./BookDetail8.vue";
+  import BookDetail9 from "./BookDetail9.vue";
+  import BookDetail10 from "./BookDetail10.vue";
+
   export default {
     components: {
       Subpage,
+      BookDetail1, BookDetail2, BookDetail3, BookDetail4, BookDetail5,
+      BookDetail6, BookDetail7, BookDetail8, BookDetail9, BookDetail10
+    },
+    mounted() {
+      // this.tabIndex = Number(this.$route.query.tabId);
+      if (!this.$route.query.tabId) {
+        this.tabIndex = 0;
+      } else {
+        this.tabIndex = Number(this.$route.query.tabId);
+      }
     },
     data() {
       return {
@@ -267,16 +306,34 @@
                 },
             ],
         },
-        bookinfolists: [
-          { label: "저자", content: "김윤미" },
-          { label: "발행일", content: "2019-11-28" },
-          { label: "사양", content: "312쪽 | 188*257mm" },
-          { label: "ISBN", content: "979-11-6303-119-2 13000" },
-          { label: "정가", content: "16,000원" },
-          { label: "상태", content: "정상 판매중" },
+        // bookinfolists: [
+        //   { label: "저자", content: "김윤미" },
+        //   { label: "발행일", content: "2019-11-28" },
+        //   { label: "사양", content: "312쪽 | 188*257mm" },
+        //   { label: "ISBN", content: "979-11-6303-119-2 13000" },
+        //   { label: "정가", content: "16,000원" },
+        //   { label: "상태", content: "정상 판매중" },
+        // ],
+        // tapselect: "introduce",
+        componentslist: [
+          BookDetail1, BookDetail2, BookDetail3, BookDetail4, BookDetail5,
+          BookDetail6, BookDetail7, BookDetail8, BookDetail9, BookDetail10
         ],
-        tapselect: "introduce",
+        tabIndex: 0,
       };
+    },
+    methods: {
+      Clicklink(tabIndex) {
+        if (!(this.$route.query.tabId == tabIndex)) {
+          this.tabIndex = tabIndex;
+          return this.$router.push("/book?tabId=" + tabIndex);
+        }
+      },
+      handleInit() {
+        this.$nextTick(() => {
+          this.$refs.carousel.getRootNode(this.tabIndex);
+        });
+      },
     },
   };
 </script>
