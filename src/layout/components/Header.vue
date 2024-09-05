@@ -1,6 +1,7 @@
 <template>
   <div>
-    <header>
+    <!-- <header class="scrollTop"> -->
+    <header :class="Topclass">
       <!-- 상단 영역 -->
       <div class="topmenu">
         <div class="contentbox">
@@ -138,7 +139,14 @@
           mail: "",
           checkedtype: [],
         },
+        Topclass: "",
       };
+    },
+    mounted() {
+      window.addEventListener("scroll", this.handleScroll);
+    },
+    beforeDestroy() {
+      window.removeEventListener("scroll", this.handleScroll);
     },
     methods: {
       goToPage(target) {
@@ -156,7 +164,18 @@
           this.form.checkedtype = [];
         });
       },
+      handleScroll() {
+        // console.log("scroll");
+        const scrollTop = window.pageYOffset;
+        const headerTop = document.querySelector("header").clientHeight;
+        if (scrollTop < headerTop) {
+          this.Topclass = "";
+        } else {
+          this.Topclass = "scrollTop";
+        }
+      },
     },
   };
 </script>
+
 
