@@ -157,7 +157,9 @@ footer{margin-top:auto;position:relative;}
 .imgbox > img{max-width:100%;}
 .rollimg > strong{display:block;font-size:15px;color:#666;}
 .textbox{font-size:13px;color:#ababab;}
-
+/* searchbox */
+.searchbox{padding:40px 0;margin:60px 0 40px;background:#454545;}
+.searchbox .maintit{color:#fff;}
 
 
 
