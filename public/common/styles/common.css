@@ -207,11 +207,28 @@ footer{margin-top:auto;position:relative;}
 .titlebar > h1 {font-size:35px;font-weight:900;color:#666;}
 .pagenavi{color:#aeaeae;}
 .pagenavi strong{color:#222;display:inline-block;background:url("/images/icon_16_arrow_small_right.svg") no-repeat 0 center/16px;padding-left:16px;}
-
-
-
-
-
+/* Subpage - 도서 소개 */
+.subpageslider{padding:20px 20px 10px 20px;background-color:#f5f5f5;}
+.subpageslider .slick-arrow{margin-top:-35px;}
+.subpageslider .rollimg > strong{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.bookdetail{margin-top:50px;}
+.booktitle{padding-bottom:20px;border-bottom:solid 1px #ddd;font-size:25px;color:#17a2b8;}
+.booktitle > span{display:block;font-size:13px;color:#ababab;}
+.book-info{display:flex;padding:50px 30px;}
+.imgview{max-width:260px;}
+.imgview img{width:100%;}
+.bookbtns{display:flex;justify-content:space-between;margin-top:12px;max-width:260px;}
+.btn-lightgray{background-color:#afafaf;color:#fff;height:30px;font-size:12px;line-height:28px;border-radius:0;}
+.bookbtns .btn-lightgray .bi::after{margin:-2px 2px 0 0;}
+.bookbtns .btn-lightgray{width:49%;}
+.infolist{flex:1;padding:0 20px;}
+.infolist li{margin-bottom:22px;font-size:16px;}
+.infolist li .label,
+.infolist li .infocontent{display:inline-block;}
+.infolist li .label{width:150px;font-weight:900;}
+.infolist li .infocontent{color:#222;}
+.infolist li .label{padding-left:20px;position:relative;}
+.infolist li .label::after{content:'';display:block;width:18px;height:18px;background:url("/images/file-text.svg") no-repeat left center/100%;opacity:0.3;position:absolute;top:4px;left:0;}
 
 /* 태블릿 */
 @media screen and (max-width: 1024px) {
@@ -276,5 +293,12 @@ footer{margin-top:auto;position:relative;}
 
   /* 서브 페이지 */
   .titlebar > h1{font-size:20px;}
+  /* Subpage - 도서 소개 */
+  .book-info{display:block;padding:20px 0;}
+  .imgview{margin:0 auto;}
+  .infolist{padding:0;margin-top:20px;}
+  .infolist li{font-size:14px;}
+  .infolist li .label{width:90px;}
+  .infolist li .label::after{width:14px;height:14px;top:3px;}
 }
 

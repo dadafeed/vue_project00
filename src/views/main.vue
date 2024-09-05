@@ -153,7 +153,7 @@
                 },
             },
             {
-              breakpoint: 414, // 브라우저 크기가 464 이하일 때
+              breakpoint: 414, // 브라우저 크기가 414 이하일 때
               settings: {
                 slidesToShow: 2,
               },
