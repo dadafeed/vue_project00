@@ -57,7 +57,23 @@
           ></span>
         </div>
       </section>
-      <section class="bannermenu"></section>
+      <section class="bannermenu">
+        <!-- <div class="itembox">
+          <span>교수 및 강사 전용</span>
+          <strong>교재 샘플/강의 자료</strong>
+          <i class="bi bi-stickies"></i>
+        </div> -->
+        <div
+          class="itembox"
+          v-for="(item, index) in mainbanner"
+          :key="index"
+          @click="gotoPage(item.url)"
+        >
+          <span v-html="item.stitle"></span>
+          <strong v-html="item.maintit"></strong>
+          <i class="bi" :class="item.iconname"></i>
+        </div>
+      </section>
       <section class="notice">
         <h1 class="maintit">공지 사항</h1>
       </section>
@@ -167,6 +183,26 @@
           },
         ],
         keyword: "",
+        mainbanner: [
+          {
+            stitle: "교수 및 강사 전용",
+            maintit: "교재 샘플/강의 자료",
+            iconname: "bi-stickies",
+            url: "/classsample",
+          },
+          {
+            stitle: "스터디 카페",
+            maintit: "Do it! 스터디룸",
+            iconname: "bi-book-half",
+            url: "https://cafe.naver.com/doitstudyroom",
+          },
+          {
+            stitle: "이지스 SNS",
+            maintit: "페이스북",
+            iconname: "bi-facebook",
+            url: "https://www.facebook.com/easyspub/",
+          },
+        ],
       };
     },
     created() {
@@ -180,6 +216,13 @@
         // console.log(event.target);
         document.querySelector(".active").classList.remove("active");
         event.target.classList.add("active");
+      },
+      gotoPage(url) {
+        if (url == "/classsample") {
+          this.$router.push(url);
+        } else {
+          window.open(url, "_blank");
+        }
       },
     },
     computed: {

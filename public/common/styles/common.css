@@ -176,9 +176,12 @@ footer{margin-top:auto;position:relative;}
 .nonemessage > .bi{font-size:15px;}
 .nonemessage > .bi::before{margin-top: -2px;}
 .autolayer.none{height:auto;}
-
-
-
+.bannermenu{display:flex;flex-wrap:wrap;justify-content:space-between;max-width:1200px;width:100%;padding:0 20px;margin:0 auto;}
+.itembox{flex-basis:32%;padding:30px 30px 50px 30px;background:#f1f1f1;border-radius:12px;position:relative;cursor:pointer;}
+.itembox span{display: block;font-size: 12px;}
+.itembox strong{color:#222;font-size:20px;}
+.itembox .bi{position:absolute;right:20px;bottom:20px;}
+.itembox .bi::before{font-size:50px;}
 
 
 
@@ -218,7 +221,7 @@ footer{margin-top:auto;position:relative;}
   .footer-info address span{display:block;}
 
   /* 메인 영역 */
-  .tapcontent:{padding:0 10px;}
+  .tapcontent{padding:0 10px;}
   .maintit{font-size:26px;}
   .maintit > span{font-size:14px;margin-top:0;}
   .tap{margin:20px 0;}
@@ -232,4 +235,9 @@ footer{margin-top:auto;position:relative;}
   .guidehash span{font-size:12px;}
   .autolayer{top:29px;height:130px;}
   .autolayer ul li{padding:5px 15px;font-size:14px;}
+  /* bannermenu */
+  .itembox{flex-basis:100%;padding:20px 20px 30px 20px;}
+  .itembox + .itembox{margin-top:20px;}
+  .itembox strong{font-size:16px;}
+  .itembox .bi::before{font-size:45px;}
 }
