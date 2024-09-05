@@ -229,6 +229,24 @@ footer{margin-top:auto;position:relative;}
 .infolist li .infocontent{color:#222;}
 .infolist li .label{padding-left:20px;position:relative;}
 .infolist li .label::after{content:'';display:block;width:18px;height:18px;background:url("/images/file-text.svg") no-repeat left center/100%;opacity:0.3;position:absolute;top:4px;left:0;}
+/* Subpage - 도서 소개 탭메뉴 */
+.detailTap{display:flex;}
+.detailTap .btn-group-toggle{flex:1 1 auto;height:40px;border-left:solid 1px #ddd;background-color:#eaeaea;}
+.btn-detailtap{color:#aeaeae;font-size:14px;text-align:center;line-height:40px;border-radius:0;}
+.btn-detailtap .bi::before{margin:-2px 2px 0 0;}
+.btn-detailtap .btn-group-toggle:nth-of-type(1),
+.btn-detailtap .btn-group-toggle:nth-of-type(4){border-left:none;}
+.btn-detailtap.active{background-color:#606060;color:#fff;}
+.detailTapCon{padding:30px;}
+.tapcontit{margin-bottom:20px;font-size:18px;color:#7952b3;font-size:24px;font-weight:900;}
+.detailTapCon > p{margin-bottom:20px;}
+
+
+
+
+
+
+
 
 /* 태블릿 */
 @media screen and (max-width: 1024px) {
@@ -300,5 +318,12 @@ footer{margin-top:auto;position:relative;}
   .infolist li{font-size:14px;}
   .infolist li .label{width:90px;}
   .infolist li .label::after{width:14px;height:14px;top:3px;}
+  /* Subpage - 도서 소개 탭메뉴 */
+  .detailTap{flex-wrap:wrap;}
+  .detailTap .btn-group-toggle{flex-basis:33.3%;flex-shrink:0;}
+  .detailTap .btn-group-toggle:nth-of-type(4){border-left:none;}
+  .detailTapCon{padding:20px 0;}
+  .tapcontit,
+  .tapcontit > strong{font-size:15px;}
 }
 
