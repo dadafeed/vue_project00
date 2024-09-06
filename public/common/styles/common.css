@@ -75,6 +75,7 @@ button:focus{outline: none;}
 .link{cursor: pointer;}
 .flexbox{display: flex; }
 
+/* body{min-width:280px;} */
 .contentbox{width:100%;max-width:1200px;margin:0 auto;padding:0 20px;}
 
 /* 헤더 영역 */
@@ -270,6 +271,11 @@ footer{margin-top:auto;position:relative;}
 .classsample .form-group > div{flex: 1 1 0;}
 .classsample .form-group input.form-control{height:30px;}
 .classsample .form-group small{font-size:14px;margin-top:5px;}
+/* Subpage - 회사 소개 */
+.introcon{background:url("/images/main_ico2.png") no-repeat right 10px/190px;}
+.introgroup{padding-right:300px;margin-bottom:30px;}
+.introgroup strong{display:block;margin-bottom:10px;font-size:25px;font-weight:900;color:#222;}
+.introgroup:nth-of-type(2){background:url("/images/main_ico1.png") no-repeat left 0px/200px;padding:0 0 0 300px;}
 
 
 
@@ -356,5 +362,10 @@ footer{margin-top:auto;position:relative;}
   .listitem{flex-direction:column;align-items:center;justify-content:center;}
   .listthum{height:160px;}
   .listdetail{padding-left:0;}
+  /* Subpage - 회사 소개 */
+  .introcon{background:none;}
+  .introgroup{padding-right:0;}
+  .introgroup strong{font-size:18px;}
+  .introgroup:nth-of-type(2){background:url("/images/main_ico1.png") no-repeat center 0px/200px;padding:193px 0 0 0;}
 }
 
