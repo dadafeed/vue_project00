@@ -261,8 +261,15 @@ footer{margin-top:auto;position:relative;}
 .movieclasspage .listnum strong,
 .movieclasspage .listdetail > strong{color:#7952b3;}
 .movieclasspage .btn-listdown{background-color:#7952b3;}
-
-
+/* Subpage - 교재 샘플 */
+.classsample .form-group:nth-of-type(1){padding-right:0;}
+.classsample .form-group .d-block:nth-of-type(1){padding-right:0;}
+.classsample .form-group{display:flex;}
+.classsample form{/*max-width:480px;*/width:100%;margin:0 auto;}
+.classsample .form-group > label{flex-basis:130px;}
+.classsample .form-group > div{flex: 1 1 0;}
+.classsample .form-group input.form-control{height:30px;}
+.classsample .form-group small{font-size:14px;margin-top:5px;}
 
 
 
