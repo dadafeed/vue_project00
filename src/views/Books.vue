@@ -331,7 +331,7 @@
       },
       handleInit() {
         this.$nextTick(() => {
-          this.$refs.carousel.getRootNode(this.tabIndex);
+          this.$refs.carousel.getRootNode(this.tabIndex); 
         });
       },
     },
