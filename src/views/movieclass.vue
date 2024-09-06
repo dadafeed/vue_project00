@@ -1,0 +1,18 @@
+<template>
+  <div>
+    <Subpage :pagetit="'동영상 강의'">
+      <div class="movieclasspage">
+        <div class="subpageguide">
+          동영상 강의를 볼 수 있습니다.
+        </div>
+      </div>
+    </Subpage>
+  </div>
+</template>
+
+<script>
+  import Subpage from '@/layout/components/Subpage.vue';
+  export default {
+    component: { Subpage },
+  };
+</script>

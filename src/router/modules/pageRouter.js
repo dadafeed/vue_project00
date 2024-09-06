@@ -31,6 +31,16 @@ const pageRouter = {
         component: () => import("@/views/Books.vue"),
       },
     ]), // '현재 주소(/book) + 쿼리 문자열(/:tabId)'로 변경된 경로를 반환함
+    {
+      path: "/reference",
+      name: "reference",
+      component: () => import("@/views/reference.vue"),
+    },
+    {
+      path: "/movieclass",
+      name: "movieclass",
+      component: () => import("@/views/movieclass.vue"),
+    },
   ],
 };
 

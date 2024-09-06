@@ -242,9 +242,21 @@ footer{margin-top:auto;position:relative;}
 .detailTapCon > p{margin-bottom:20px;}
 
 .bookpage .rollimg.active .imgbox{display:block;border:solid 3px #d1e0e5;}
-
-
-
+/* Subpage - 자료실, 동영상 강의 공통 */
+.subpageguide{margin-bottom:30px;color:#ababab;}
+.listnum strong{color:#dc3545;}
+.listbox{margin-top:20px;padding:20px;border:solid 1px #ddd;}
+.listitem{display:flex;margin-top:30px;padding-bottom:20px;border-bottom:1px solid #ddd;}
+.listitem:nth-of-type(1){margin-top:0;}
+.listthum{width:160px;}
+.listthum img{max-width:100%;}
+.listdetail{flex:1;padding:10px 0 0 40px;}
+.listdetail > strong{display:block;margin-bottom:10px;padding:0 0 10px;border-bottom: 1px solid #ddd;font-size:20px;color:#dd868a;}
+.listdate{text-align:right;color:#ababab;font-size:13px;}
+.itembtns{margin:10px 0 20px;}
+.btn-listdown{display:inline-block;height:30px;padding:0 20px;margin-right:10px;min-width:140px;font-size:14px;background-color:#dd868a;color:#fff;width:auto;border-radius:0;line-height:28px;}
+.btn-listdown .bi::before{margin-top:-2px;}
+.downguide{color:#ababab;font-size:12px;}
 
 
 
@@ -327,5 +339,9 @@ footer{margin-top:auto;position:relative;}
   .detailTapCon{padding:20px 0;}
   .tapcontit,
   .tapcontit > strong{font-size:15px;}
+  /* Subpage - 자료실, 동영상 강의 공통 */
+  .listitem{flex-direction:column;align-items:center;justify-content:center;}
+  .listthum{height:160px;}
+  .listdetail{padding-left:0;}
 }
 
