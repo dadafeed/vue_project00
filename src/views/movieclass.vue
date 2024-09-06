@@ -13,6 +13,7 @@
 <script>
   import Subpage from '@/layout/components/Subpage.vue';
   export default {
-    component: { Subpage },
+    components: { Subpage },
   };
 </script>
+
